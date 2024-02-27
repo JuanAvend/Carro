@@ -1,0 +1,119 @@
+.container{
+    background-image: url(./Imagenes/fondo.jpg);
+    width: 99%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     background-repeat: no-repeat;
+ */    background-size: cover;
+    position: absolute;
+   
+}
+
+
+.carro img{
+    width: 30rem;
+    position: relative;
+    top: 18rem;
+   
+}
+.llanta1 img{
+  position: relative;
+width: 6rem;
+right: -2.8rem;
+top: 12.9rem;
+
+}
+
+.llanta2 img{
+position: relative;
+width: 6rem;
+top: 6.9rem;
+left: 21.4rem;
+
+}
+
+.luces{
+    width: 1rem;
+    display: flex;
+    position: relative;
+    top: -21.5rem;
+    right: 12rem;
+  
+}
+.oculto{
+    display: none;
+}
+.oculto2{
+    display: none;
+}
+.sprite{
+width: 187px;
+position: relative;
+height: 7.5rem;
+background: url(./Imagenes/sprite\ humo.png);
+top: 6rem;
+right: -2.2rem;
+
+}
+
+
+.containerMover{
+    animation: container 2s infinite linear;
+}
+.carroMover{
+    animation: carro 2s infinite linear;
+}
+
+.llanta1Mover{
+    animation: rodar 2s infinite linear;
+}
+.llanta2Mover{
+    animation: rodar 3s infinite linear;
+}
+.lucesMover{
+    animation: luces 2s infinite linear;
+}
+.spriteMover{
+    animation: humo 2s steps(5) infinite;
+}
+
+
+@keyframes humo {
+    100%{
+background-position-x: 900px;
+    }
+}
+
+@keyframes rodar{
+100%{
+    rotate: -1000deg;
+}
+}
+
+@keyframes container {
+    100% {
+        background-position-x: 2000px;
+    }
+}
+
+
+@keyframes luces {
+    0%{
+        opacity: 0;
+    }
+   50%{
+    opacity: 0.5;
+   } 
+    100%{ opacity: 1;}
+}
+
+@keyframes carro {
+    0%{
+        top: 17.3rem;
+    }
+    100%{
+        top: 17.2rem;
+    }
+}
